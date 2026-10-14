@@ -1,0 +1,25 @@
+{
+  "policy_id": "cityflo-lateness-v1",
+  "version": "1.0.0",
+  "service_date_start": "2026-08-03",
+  "service_date_end": "2026-08-09",
+  "service_timezone": "Asia/Kolkata",
+  "late_threshold_min": 5,
+  "late_comparison": "strictly_greater_than",
+  "primary_rank_metric": "late_share",
+  "tie_breakers": [
+    "late_share_desc_unrounded",
+    "median_excess_desc",
+    "mean_excess_desc",
+    "route_code_asc"
+  ],
+  "minimum_scoreable_trips": 30,
+  "minimum_covered_service_dates": 5,
+  "minimum_threshold_status": "chosen_policy_threshold_not_cityflo_fact",
+  "schedule_scenario": "provided_route_schedule",
+  "malformed_arrival_disposition": "UNCERTAIN",
+  "negative_duration_disposition": "EXCLUDED",
+  "unusual_offset_disposition": "SCORED_WITH_FLAG_IF_VALID_AFTER_NORMALIZATION",
+  "extreme_trip_ids_in_primary": ["T1-04521"],
+  "primary_disruption_filter": null
+}
